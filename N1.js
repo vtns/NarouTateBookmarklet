@@ -91,7 +91,7 @@ if (document.getElementById('NN_JS_MARK')) {
 
   document.open();
   document.write('<html>');
-  document.write('<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//memo.sakura.ne.jp/bookmarklet/NN.css"></head>');
+  document.write('<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//github.com/vtns/NarouTateBookmarklet/blob/c4e78a57dafd209fd225dcd32ef249fefd59fa5a/N1.css"></head>');
   // top box
   document.write('<body><div class="container"><div id="NN_JS_MARK" class="topRow">');
   document.write('<div id="box2" style="width:' + w2 +'px; max-width:' + w2 + 'px"></div><div id="num" style="width:48px"></div></div></div>');
