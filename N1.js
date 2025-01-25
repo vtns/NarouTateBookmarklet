@@ -1,8 +1,17 @@
 function b() {
-  var h = document.getElementsByTagName('iframe')[0].contentDocument.getElementById('novel_honbun').innerHTML;
-  var s = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('novel_subtitle')[0].outerHTML;
-  var n = document.getElementsByTagName('iframe')[0].contentDocument.getElementById('novel_no').outerHTML;
-  
+  var h = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('p-novel__body')[0].innerHTML;
+  var tt = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('p-novel__title--rensai');
+  var s = "";
+  if (tt.length > 0) {
+    s = tt[0].outerHTML;
+  }
+
+  document.title = document.getElementsByTagName('iframe')[0].contentDocument.title;
+  var n = "";
+  tt = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('p-novel__number');
+  if (tt.length > 0) {
+    n = tt[0].innerText;
+  }
 
     h = (s + '<div class="zerobox clear" style="margin-left:1em;"></div>' + h).replace(
         /(<("[^"]*"|'[^']*'|[^'">])*>)|([0-9a-zA-Z][0-9a-zA-Z/:-]*(\.[0-9a-zA-Z:-]+)*)|([!?][!?])/g, 
@@ -26,11 +35,11 @@ function b() {
   var next = (1<0);
   var prev = (1<0);
 
-  var nexts = document.getElementsByTagName('iframe')[0].contentDocument.querySelectorAll('[rel="next"]');
+  var nexts = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('c-pager__item c-pager__item--next')
   if (nexts.length > 0) {
     next = nexts[0];
   }
-  var prevs = document.getElementsByTagName('iframe')[0].contentDocument.querySelectorAll('[rel="prev"]');
+  var prevs = document.getElementsByTagName('iframe')[0].contentDocument.getElementsByClassName('c-pager__item c-pager__item--before')
   if (prevs.length > 0) {
     prev = prevs[0];
   }
@@ -46,12 +55,12 @@ function b() {
     }
   }
 
-  if (next) {
-    b = b + '<div class="boxBtn" onclick="load(\'' + next.href + '\')" >次へ</div>';
-  }
-
   if (prev) {
     b = b + '<div class="boxBtn" onclick="load(\'' + prev.href + '\')" >前へ</div>';
+  }
+
+  if (next) {
+    b = b + '<div class="boxBtn" onclick="load(\'' + next.href + '\')" >次へ</div>';
   }
 
   document.getElementById('pageBox').innerHTML = '<div class="fbox">'+ b +'</div>' + h + '<div class="fbox"><div class="zerobox clear"></div>'+b+'</div><div class="zerobox clear"></div><div class="box"></div>';
@@ -85,21 +94,9 @@ function load(url) {
 
 if (document.getElementById('NN_JS_MARK')) {
 } else {
-  var cur = document.URL;
-  var w = document.documentElement.clientWidth;
-  var w2 = w - 48;
+var cur = document.URL;
+var w = document.documentElement.clientWidth;
+var w2 = w - 48;
 
-  document.open();
-  document.write('<html>');
-  document.write('<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//github.com/vtns/NarouTateBookmarklet/blob/c4e78a57dafd209fd225dcd32ef249fefd59fa5a/N1.css"></head>');
-  // top box
-  document.write('<body><div class="container"><div id="NN_JS_MARK" class="topRow">');
-  document.write('<div id="box2" style="width:' + w2 +'px; max-width:' + w2 + 'px"></div><div id="num" style="width:48px"></div></div></div>');
-
-  // contents
-  document.write('<div class="body-content-wrapper"><iframe width=1px height=1px onload="b()" src="' + cur + '" scrolling=no frameborder=0></iframe>');
-  document.write('<div id="pageBox"></div></div></div>');
-
-  document.write('</body></html>');
-  document.close();
+document.getElementsByTagName('html')[0].innerHTML='<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//memo.sakura.ne.jp/bookmarklet/N1.css"></head><body><div class="container"><div id="NN_JS_MARK" class="topRow"><div id="box2" style="width:' + w2 +'px; xx-max-width:' + w2 + 'px"></div><div id="num" style="width:48px"></div></div></div><div class="body-content-wrapper"><iframe width=1px height=1px onload="b()" src="' + cur + '" scrolling=no frameborder=0></iframe><div id="pageBox"></div></div></div></body>';
 }
