@@ -1,160 +1,218 @@
 html, body { 
-	height:100%;
-	margin: 0;
-	padding: 0;
-	position: fixed;
+  height:100%;
+  xx-margin: 0;
+  padding: 0;
+  xx-background-color:yellow;
 }
 
 p {
-	margin:0;
+  margin:0;
 }
 
 #novel_no {
-	display: inline;
-	padding-left:1em;
-	font-family: sans-serif;
+  display: inline;
+  padding-left:1em;
+  font-family: sans-serif;
 }
 
-.novel_subtitle {
-	 font-size:125%;
-	 margin:1em; 
+.p-novel__subtitle {
+  font-size:125%;
+  margin:1em; 
+  font-family: sans-serif; 
+  margin-left:1em;
+  font-weight: normal;
+}
+
+.p-novel__title {
+  font-size:125%;
+  margin:1.25em; 
+  font-family: sans-serif; 
+  font-weight: normal;
+  margin-left:1em;
+}
+
+.p-novel__title--rensai {
+  font-size:125%;
+  margin:1em; 
+  font-family: sans-serif; 
+  font: sans-serif;
+  margin-left:1em;
 }
 
 .chapter_title {
-	font-size:80%; 
-	font-family: sans-serif; 
-	margin-left:1em; 
+  font-size:80%; 
+  font-family: sans-serif; 
+  font: sans-serif;
+  margin-left:1em; 
 }
 
-.container {
-    display: table;
-    width: 100%;
-    height: 100%;
-	margin: 0;
-	padding: 0;
+.abccontainer {
+  display: table;
+  xx-width-nn: 100vh;
+  xx-height-nn: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 .dimm {
   color:#aaa;
 }
 
+
 .topRow  {
-	display:table;
-	height: 2em;
-	width:100%;
-	text-align:center;
-	font-size:75%;
-	font-family: sans-serif;
+  display:none;
+  height: 2em;
+  width:100vh;
+  text-align:center;
+  font-size:75%;
+  font-family: sans-serif;
 }
 
 #box2 {
-	display: table-cell;
-	height:100%;
-	max-height:100%;
-	width:auto;
-	border-bottom: #EEE solid 1px;
-	vertical-align: middle;
-	padding-left: 0.5em;
-	text-align: left;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;	
+  display: table-cell;
+  height:100%;
+  max-height:100%;
+  width:auto;
+  border-bottom: #EEE solid 1px;
+  vertical-align: middle;
+  padding-left: 0.5em;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;	
 }
 
 #num {
-	display: table-cell;
-	height:100%;
-	width:4em;
-	border-bottom: #EEE solid 1px;
-	xborder-right: black solid 1px;
-	vertical-align: middle;
-	text-indent: 0.5em;
-	text-align: left;
-	padding-right: 0.75em;
+  display: table-cell;
+  height:100%;
+  width:4em;
+  border-bottom: #EEE solid 1px;
+  xborder-right: black solid 1px;
+  vertical-align: middle;
+  text-indent: 0.5em;
+  text-align: left;
+  padding-right: 0.75em;
 }
 
 #box1 {
-	display: table-cell;
-	height:100%;
-	width:4em;
-	border-left: #EEE solid 1px;
-	border-bottom: #EEE solid 1px;
-	vertical-align: middle;
+  display: table-cell;
+  height:100%;
+  width:4em;
+  border-left: #EEE solid 1px;
+  border-bottom: #EEE solid 1px;
+  vertical-align: middle;
 }
 
 #box3 {
-	display: table-cell;
-	height:100%;
-	width:4em;
-	border-bottom: #EEE solid 1px;
-	xborder-bottom: black solid 1px;
-	vertical-align: middle;
+  display: table-cell;
+  height:100%;
+  width:4em;
+  border-bottom: #EEE solid 1px;
+  xx-border-bottom: black solid 1px;
+  vertical-align: middle;
+  xx-background-color:yellow;
 }
 
 .middleRow  {
-	display:table-row;
-	height:1em;
-	width:100%;
-	xborder-bottom: black solid 1px;
-	overflow: hidden;
+  display:table-row;
+  height:1em;
+  width:100%;
+  xx-border-bottom: black solid 1px;
+  overflow: hidden;
+  xx-background-color:blue;
 }
 
 .bottomRow {
-	display:table-row;
-	height:100%;
-	width:100%;
+  display:table-row;
+  height:100%;
+  width:100vh;
 }
 
 .body-content-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
+  xx-width: 100vh;
+  height: 100%;
+  margin: 0;
+  xx-position: relative;
+  xx-background-color:green;
 }
 
 #pageBox {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    xxoverflow: auto;
-    font:serif; 
-    writing-mode:vertical-rl;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom:0.5em;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left:1em;
+  xxoverflow: auto;
+  font:serif; 
+  writing-mode:vertical-rl;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  margin-top:auto;
+  margin-bottom:auto;
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "ＭＳ Ｐ明朝", "MS PMincho", "Times New Roman",  serif;
+  xx-font-size:90%;
 }
 
 #pageBox::-webkit-scrollbar {
-    border-bottom: #ddd solid 1px;
-    aabackground: #eee;
-    height:10px;
+  border-bottom: #ddd solid 1px;
+  x-background: #eee;
+  height:10px;
 }
 
 #pageBox::-webkit-scrollbar-thumb {
-    background: #eee;
+  background: #eee;
+}
+
+.p-novel__text--afterword {
+  display:none;
+}
+
+.p-novel__text--preface {
+  display:none;
 }
 
 .footerRow  {
-	display:table-row;
-padding-top:4px;
-	height: 4px;
-	width:100%;
-background-color:#EEE;
+  display:table-row;
+  padding-top:4px;
+  height: 4px;
+  width:100%;
+  background-color:#EEE;
 }
 
+div.fbox {
+  text-align: right;
+  height:5em;
+  margin-top:auto;
+}
 
+div.boxBtn {
+  xx-display:inline-block;
+  xx-padding:1em 0.5em;
+  margin:0.5em;
+  xx-border:1em;
+  color: blue;
+  font-family: sans-serif; 
+  text-align:right;
+}
 
 div.right {
   text-align: right;
   margin-left:2em;
-  margin-right:2em;
+  xx-margin-right:2em;
+  xx-background-color:green;
 }
 
 .button {
-  margin:1em;
+  margin-top:auto;
+  margin-bottom:1em;
+  margin-left:1em;
+  margin-right:1em;
   border: #CCC solid 2px;
   background-color: #EEE;
   padding: 1em;
+  xx-background-color:red;
 }
