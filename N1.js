@@ -98,5 +98,5 @@ var cur = document.URL;
 var w = document.documentElement.clientWidth;
 var w2 = w - 48;
 
-document.getElementsByTagName('html')[0].innerHTML='<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//https://github.com/vtns/NarouTateBookmarklet/archive/refs/tags/1.1/N1.js"></head><body><div class="container"><div id="NN_JS_MARK" class="topRow"><div id="box2" style="width:' + w2 +'px; xx-max-width:' + w2 + 'px"></div><div id="num" style="width:48px"></div></div></div><div class="body-content-wrapper"><iframe width=1px height=1px onload="b()" src="' + cur + '" scrolling=no frameborder=0></iframe><div id="pageBox"></div></div></div></body>';
+document.getElementsByTagName('html')[0].innerHTML='<head><link rel="stylesheet" type="text/css" href="' + location.protocol + '//github.com/vtns/NarouTateBookmarklet/archive/refs/tags/1.1/N1.js"></head><body><div class="container"><div id="NN_JS_MARK" class="topRow"><div id="box2" style="width:' + w2 +'px; xx-max-width:' + w2 + 'px"></div><div id="num" style="width:48px"></div></div></div><div class="body-content-wrapper"><iframe width=1px height=1px onload="b()" src="' + cur + '" scrolling=no frameborder=0></iframe><div id="pageBox"></div></div></div></body>';
 }
